@@ -1,4 +1,4 @@
-import isUrlNextJsPage from "../lib";
+import isUrlNextJsPage from "../lib/is-url-nextjs-page";
 
 describe("isUrlNextJsPage function", () => {
   test("isUrlNextJsPage is a function", () => {

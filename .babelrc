@@ -1,3 +1,33 @@
 {
-  "presets": ["env", "minify"]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": true
+        },
+        "exclude": ["transform-async-to-generator", "transform-regenerator"],
+        "modules": false,
+        "loose": true
+      }
+    ],
+    "minify"
+  ],
+  "plugins": ["transform-object-rest-spread"],
+  "env": {
+    "commonjs": {
+      "presets": [
+        [
+          "env",
+          {
+            "loose": true
+          }
+        ],
+        "minify"
+      ]
+    },
+    "test": {
+      "presets": ["env"]
+    }
+  }
 }
