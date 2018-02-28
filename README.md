@@ -16,7 +16,7 @@ A utility to check if the requested path a nextjs page script, generally present
 ## Usage
 
 ```javascript
-import isUrlNextJsPage from "../lib";
+import isUrlNextJsPage from "is-url-nextjs-page";
 const isNextJsPage = isUrlNextJsPage(req.url);
 ```
 
