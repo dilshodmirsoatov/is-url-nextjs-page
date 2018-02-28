@@ -1,0 +1,41 @@
+{
+  "name": "is-url-nextjs-page",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "pretty": "prettier --write '{__tests__,src}/*.js'",
+    "build": "babel src --out-dir lib",
+    "lint": "eslint {__tests__,src}/*.js",
+    "test:only": "npm run build && jest",
+    "test:watch": "jest --watch",
+    "pretest": "npm run build",
+    "test": "npm run lint && npm run test:only",
+    "prepublish": "npm run pretty && npm run test",
+    "postpublish": "git push origin master --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imbhargav5/is-url-nextjs-page.git"
+  },
+  "author": "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imbhargav5/is-url-nextjs-page/issues"
+  },
+  "homepage": "https://github.com/imbhargav5/is-url-nextjs-page#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-jest": "22.4.1",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.18.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-prettier": "2.6.0",
+    "jest": "22.4.2",
+    "prettier": "1.10.2",
+    "rimraf": "2.6.2"
+  }
+}
