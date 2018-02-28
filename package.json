@@ -1,15 +1,18 @@
 {
   "name": "is-url-nextjs-page",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/is-url-nextjs-page.js",
   "module": "es/is-url-nextjs-page.js",
-  "files": ["dist", "lib", "es", "src"],
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
   "scripts": {
-    "build:commonjs":
-      "cross-env NODE_ENV=cjs rollup -c -o lib/is-url-nextjs-page.js",
-    "build:es":
-      "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/is-url-nextjs-page.js",
+    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/is-url-nextjs-page.js",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/is-url-nextjs-page.js",
     "build": "npm run build:commonjs && npm run build:es",
     "clean": "rimraf lib dist es",
     "lint": "eslint {__tests__,src}/*.js",
@@ -26,8 +29,7 @@
     "type": "git",
     "url": "git+https://github.com/imbhargav5/is-url-nextjs-page.git"
   },
-  "author":
-    "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
+  "author": "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/imbhargav5/is-url-nextjs-page/issues"
