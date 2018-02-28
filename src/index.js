@@ -1,5 +1,7 @@
 import url from "url";
 
+const pattern = /(^\/)?_next\/[\w|\d|-]*\/page\/[a-zA-Z0-9_$-]+(\.js)?$/;
+
 export default function isUrlNextJsPage(resourceUrl) {
   try {
     const { pathname: resourcePathname } = url.parse(resourceUrl);
@@ -7,7 +9,7 @@ export default function isUrlNextJsPage(resourceUrl) {
       resourcePathname.startsWith("/_next") ||
       resourcePathname.startsWith("_next")
     ) {
-      if (resourcePathname.includes("/page")) {
+      if (pattern.test(resourcePathname)) {
         return true;
       }
     }
